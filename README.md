@@ -40,7 +40,7 @@ The fan speed between the given temperature and fan speed pairs is linearly inte
 Description=nvidia-tuner
 
 [Service]
-Type=oneshot
+Type=exec
 ExecStart=/usr/local/sbin/nvidia-tuner --core-clock-offset 150 --memory-clock-offset 800 --power-limit 180 --pairs 50:30,70:40,90:60,100:100
 StandardOutput=journal
 StandardError=journal
