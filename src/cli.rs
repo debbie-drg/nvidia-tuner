@@ -10,11 +10,11 @@ pub struct Cli {
     pub index: u32,
 
     /// Core clock offset (MHz)
-    #[arg(short, long)]
+    #[arg(short, long, allow_hyphen_values(true))]
     pub core_clock_offset: Option<i32>,
 
     /// Memory clock offset (MHz)
-    #[arg(short, long)]
+    #[arg(short, long, allow_hyphen_values(true))]
     pub memory_clock_offset: Option<i32>,
 
     /// Power limit (W)
